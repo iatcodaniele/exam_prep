@@ -29,6 +29,7 @@ void inter(char *str1, char *str2)
     {
         if(check(str1, str1[i], i) == 0)
         {
+            j = 0;
             while(str2[j] != '\0')
             {
                 if(str2[j] == str1[i])
