@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int *ft_range(int start, int end)
+int *ft_rrange(int start, int end)
 {
     int i = 0;
     int *range;
@@ -14,8 +14,8 @@ int *ft_range(int start, int end)
     if(range == NULL)
         return NULL;
 
-    while(end != start)
-    {
+    while(end != start) //same as ft_range but reversed
+    {                    //ex: (5 - 2) will display {2, 3, 4, 5}
         range[i] = end;
         i++;
         if(end > start)
