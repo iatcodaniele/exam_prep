@@ -50,7 +50,7 @@ int main(int argc, char **argv)
             }
             i++;
         }
-        while((argv[1][j] >= 33 && argv[1][j] <= 126) && (argv[1][j] != '\0' || argv[1][j] != ' ' || argv[1][j] != '\t'))
+        while((argv[1][j] >= 33 && argv[1][j] <= 126) /*&& (argv[1][j] != '\0' || argv[1][j] != ' ' || argv[1][j] != '\t')*/)
         {
             ft_putchar(argv[1][j]);
             j++;
