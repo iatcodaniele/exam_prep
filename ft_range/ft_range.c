@@ -8,7 +8,7 @@ int *ft_range(int start, int end)
 
     if(start > end)
     {
-        range = (int *)malloc(sizeof(int) * (start -  end + 1));
+        range = (int *)malloc(sizeof(int) * (start -  end + 1));  //malloc size depends on positive/negatve range
     }
     else 
     {
@@ -20,14 +20,14 @@ int *ft_range(int start, int end)
 
     while(start != end)
     {
-        range[i] = start;
-        i++;
+        range[i] = start; //index 0 takes the value of starting number
+        i++;             //iterates until it reaches the ending number
         if(start < end)
-            start++;
+            start++; 
         else
-            start--;
-    }
-    range[i] = end;
+            start--; //if starting number is bigger than ending number, iterate backwards
+    }               //ex: (5 - 2) {5, 4, 3, 2} //index is the position in your array, don't confuse it with values
+    range[i] = end; //similar to '\0'
     return range;
 }
 
