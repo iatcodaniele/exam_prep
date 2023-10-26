@@ -6,7 +6,7 @@ int ft_strlen(char *str)
     {
         i++;
     }
-    return i;
+    return (i);
 }
 
 char *ft_strrev(char *str)
