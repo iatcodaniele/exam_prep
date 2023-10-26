@@ -7,12 +7,12 @@ int main(int argc, char **argv)
     {
         while(argv[1][i])
         {
-            if(argv[1][i] >= 65 && argv[1][i] <= 90)
+            if(argv[1][i] >= 65 && argv[1][i] <= 90) //uppercase letters
             {
-                argv[1][i] = 90 - argv[1][i] + 65;
+                argv[1][i] = 90 - argv[1][i] + 65; //to get the opposite alphabetical character
                 write(1, &argv[1][i], 1);
             }
-            else if(argv[1][i] >= 97 && argv[1][i] <= 122)
+            else if(argv[1][i] >= 97 && argv[1][i] <= 122) //lowercase letters
             {
                 argv[1][i] = 122 - argv[1][i] + 97;
                 write(1, &argv[1][i], 1);
