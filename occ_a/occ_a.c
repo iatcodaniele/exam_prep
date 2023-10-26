@@ -9,11 +9,11 @@ int occ_a(char *str)
     {
         if(str[i] == 'A')
         {
-            t++;
+            t++; //t increases only when the 'a' character is found
         }
         i++;
     }
-    return t;
+    return t; //returning number of occurences of 'a'
 }
 
 int main()
