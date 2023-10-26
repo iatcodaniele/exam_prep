@@ -44,14 +44,14 @@ int main(int argc, char **argv)
     {
         while(argv[1][i])
         {
-            if(argv[1][i] == ' ' && argv[1][i+1] >= 33 && argv[1][i+1] <= 126)
+            if(argv[1][i] == ' ' && argv[1][i+1] >= 33 && argv[1][i+1] <= 126) 
             {
-                j = i + 1;
+                j = i + 1; //saves location of start of last word
             }
             i++;
         }
-        while((argv[1][j] >= 33 && argv[1][j] <= 126) /*&& (argv[1][j] != '\0' || argv[1][j] != ' ' || argv[1][j] != '\t')*/)
-        {
+        while((argv[1][j] >= 33 && argv[1][j] <= 126)) //prints the word from the saved location
+        {                                            //as long as it's a printable char
             ft_putchar(argv[1][j]);
             j++;
         }
