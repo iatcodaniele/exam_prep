@@ -12,10 +12,10 @@ int ft_strlen(char *str)
 char *ft_strrev(char *str)
 {
     int start = 0;
-    int end = ft_strlen(str) - 1;
+    int end = ft_strlen(str) - 1; //-1 to exclude the null byte
     char temp;
 
-    while(start < ((end + 1) / 2))
+    while(start < ((end + 1) / 2)) 
     {
            temp = str[start];
            str[start] = str[end-start];
