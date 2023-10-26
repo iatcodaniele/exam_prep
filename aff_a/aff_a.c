@@ -11,7 +11,7 @@ int main(int argc, char **argv)
     }
     while(argv[1][i])
     {
-        if(argv[1][i] == 'a')
+        if(argv[1][i] == 'a') //iterates through the whole string and IF it finds an 'a', it displays it and exits
         {
             write(1, "a\n", 2);
             return (0);
