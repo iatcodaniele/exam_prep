@@ -35,7 +35,7 @@ int main()
     p = ft_range(0,5);
     while(i < 6)
     {
-        printf("%d\n", p[i]);
+        printf("%d", p[i]);
         i++;
     }
     return 0;

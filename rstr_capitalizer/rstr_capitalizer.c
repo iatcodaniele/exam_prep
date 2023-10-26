@@ -26,7 +26,6 @@ int main(int argc, char **argv)
         while(i < argc)
         {
             rstr_capitalizer(argv[i]);
-            write(1, "\n", 1);
             i++;
         }    
     }

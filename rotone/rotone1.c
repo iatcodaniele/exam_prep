@@ -12,7 +12,8 @@ int main(int argc, char **argv)
     {
         while(argv[1][i] != '\0')
         {
-            if((argv[1][i] >= 'a' && argv[1][i] <= 'y') || (argv[1][i] >= 'A' && argv[1][i] <= 'Y'))
+            if((argv[1][i] >= 'a' && argv[1][i] <= 'y') 
+            || (argv[1][i] >= 'A' && argv[1][i] <= 'Y'))
             {
                 ft_putchar(argv[1][i] + 1);
             }
@@ -26,4 +27,5 @@ int main(int argc, char **argv)
         i++;
         }
     }
+    ft_putchar('\n');
 }

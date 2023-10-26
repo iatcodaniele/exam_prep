@@ -7,16 +7,16 @@ void ft_putchar(char c)
 
 int main(int argc, char **argv)
 {
-    //int i = 0;
-    if(argc < 2)
+    int i = 0;
+    
+    if(argc > 1)
     {
-        write(1, "\n", 1);
-        return 0;
+	    while(argv[1][i])
+	    {
+		    ft_putchar(argv[1][i]);
+		    i++;
+	    }
     }
-    while(*argv[1])
-    {
-        ft_putchar(*argv[1]);
-        i++;
-    }
+    ft_putchar('\n');
     return 0;
 }

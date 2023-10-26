@@ -47,7 +47,6 @@ int main(int argc, char **argv)
     if(argc == 3)
     {
         inter2(argv[1], argv[2]);
-        ft_putchar('\n');
     }
     ft_putchar('\n');
     return 0;

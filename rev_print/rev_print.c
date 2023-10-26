@@ -31,7 +31,6 @@ int main(int argc, char **argv)
     if(argc == 2)
     {
         rev_print(argv[1]);
-        ft_putchar('\n');
     }
     ft_putchar('\n');
 }

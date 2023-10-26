@@ -13,15 +13,15 @@ char *ft_strrev(char *str)
 {
     int start = 0;
     int end = ft_strlen(str) - 1;
-    int temp;
+    char temp;
 
-    while(str[start] < str[end])
+    while(start < ((end + 1) / 2))
     {
            temp = str[start];
-           str[start] = str[end];
-           str[end] = temp;
+           str[start] = str[end-start];
+           str[end - start] = temp;
            start++;
-           end--;
+           
     }
     return (str);
 }
@@ -29,7 +29,7 @@ char *ft_strrev(char *str)
 #include <stdio.h>
 int main()
 {
-    char x[] = "   hello";
+    char x[] = "start";
 
     printf("%s", ft_strrev(x));
 }

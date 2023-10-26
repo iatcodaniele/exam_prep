@@ -55,7 +55,6 @@ int main(int argc, char **argv)
             ft_putchar(argv[1][j]);
             j++;
         }
-        ft_putchar('\n');
     }
     ft_putchar('\n');
 }

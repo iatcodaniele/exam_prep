@@ -13,7 +13,7 @@ int get_index(char c)
     {
         repeat = c - 'a' + 1;
     }
-    if(c >= 'A' && c <= 'Z')
+    else if(c >= 'A' && c <= 'Z')
     {
         repeat = c - 'A' + 1;
     }

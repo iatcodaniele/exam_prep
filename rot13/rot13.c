@@ -5,36 +5,27 @@ void ft_putchar(char c)
     write(1, &c, 1);
 }
 
-void rot13(char *str)
-{
-    int i = 0;
-
-    while(str[i])
-    {
-        if((str[i] >= 'a' && str[i] <= 'm') || (str[i] >= 'A' && str[i] <= 'M'))
-        {
-            str[i] = str[i] + 13;
-        }
-        if((str[i] >= 'm' && str[i] <= 'z') || (str[i] >= 'M' && str[i] <= 'Z'))
-        {
-            str[i] = str[i] - 13;
-        }
-        i++;
-    }
-}
-
 int main(int argc, char **argv)
 {
-    if(argc > 1)
+    if(argc == 2)
     {
-        rot13(argv[1]);
         while(*argv[1])
         {
-            ft_putchar(*argv[1]);
+            if((*argv[1] >= 'a' && *argv[1] <= 'm') || (*argv[1] >= 'A' && *argv[1] <= 'M'))
+            {
+                *argv[1] +=13;
+                ft_putchar(*argv[1]);
+            }
+            else if((*argv[1] >= 'n' && *argv[1] <= 'z') || (*argv[1] >= 'N' && *argv[1] <= 'Z'))
+            {
+                *argv[1] -=13;
+                ft_putchar(*argv[1]);
+            }
+            else
+                ft_putchar(*argv[1]);
+
             argv[1]++;
         }
-        ft_putchar('\n');
     }
     ft_putchar('\n');
-    return 0;
 }

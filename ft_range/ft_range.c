@@ -39,7 +39,7 @@ int main()
     p = ft_range(5,0);
     while(i < 6)
     {
-        printf("%d\n", p[i]);
+        printf("%d", p[i]);
         i++;
     }
     return 0;
