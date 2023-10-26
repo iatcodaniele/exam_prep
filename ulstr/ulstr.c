@@ -57,6 +57,8 @@ int main(int argc, char **argv)
                 *argv[1] += 32;
                 ft_putchar(*argv[1]);
             }
+            else
+            	ft_putchar(*argv[1]);
             argv[1]++;
         }
     }
