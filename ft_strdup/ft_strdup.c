@@ -11,12 +11,12 @@ char *ft_strdup(char *src)
         lenght++;
     }
 
-    dup = (char *)malloc(lenght + 1);
-    if(dup != NULL)
+    dup = (char *)malloc(lenght + 1);  //datatype we're allocating memory for)
+    if(dup != NULL)                    //malloc(sizeof(amount of bytes we're allocating)
     {
          while(src[i])
         {
-            dup[i] = src[i];
+            dup[i] = src[i];       //copying from our original string to the duplicate in heap
             i++;
         }
         dup[i] = '\0';
