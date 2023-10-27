@@ -8,11 +8,11 @@ void rstr_capitalizer(char *str)
     {
         if(str[i] >= 'A' && str[i] <= 'Z')
         {
-            str[i] += 32;
+            str[i] += 32; //makes all letters lowercase
         }
         if((str[i] >= 'a' && str[i] <= 'z') && (str[i + 1] == '\t' || str[i + 1] == ' ' || str[i + 1] == '\0'))
         {
-            str[i] -= 32;
+            str[i] -= 32; //the last letters of words become uppercase
         }
         write(1, &str[i++], 1);
     }
