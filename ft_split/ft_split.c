@@ -93,7 +93,7 @@ int main()
 		free(arr[i]);
 		i++;
 	}
-	free(arr);
+	free(arr); //freeing the block of memory when we're done using it(to prevent memory leaks)
 	return 0;
 }
 
