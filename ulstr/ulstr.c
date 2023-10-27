@@ -49,16 +49,16 @@ int main(int argc, char **argv)
         {
             if(*argv[1] >= 'a' && *argv[1] <= 'z')
             {
-                *argv[1] -= 32;
+                *argv[1] -= 32;   //if its lowercase, make uppercase
                 ft_putchar(*argv[1]);
             }
             else if(*argv[1] >= 'A' && *argv[1] <= 'Z')
             {
-                *argv[1] += 32;
+                *argv[1] += 32;  //if its uppercase, make lowercase
                 ft_putchar(*argv[1]);
             }
             else
-            	ft_putchar(*argv[1]);
+            	ft_putchar(*argv[1]); //if any other character, print as it is
             argv[1]++;
         }
     }
