@@ -13,15 +13,15 @@ void rotone(char *str)
     {
         if((str[i] >= 'a' && str[i] <= 'y') || (str[i] >= 'A' && str[i] <= 'Y'))
         {   
-            ft_putchar(str[i]+1);
+            ft_putchar(str[i]+1); //prints the immediate next character
         }
         else if(str[i] == 'z' || str[i] == 'Z')
         {
-            ft_putchar(str[i] - 25);
+            ft_putchar(str[i] - 25); //immediate next character is not alpha so it goes back to 'a'
         }
         else
         {
-            ft_putchar(str[i]);
+            ft_putchar(str[i]);  //other characters remain unchanged
         } 
         i++;
     }
