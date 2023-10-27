@@ -11,14 +11,14 @@ int get_index(char c)
 
     if(c >= 'a' && c <= 'z')
     {
-        repeat = c - 'a' + 1;
+        repeat = c - 'a' + 1; //get index number + 1 to include the subtracted 'a'
     }
     else if(c >= 'A' && c <= 'Z')
     {
         repeat = c - 'A' + 1;
     }
     else
-        repeat = 1;
+        repeat = 1; //for number and any other char
     return (repeat);
 }
 
@@ -31,7 +31,7 @@ int main(int argc, char **argv)
         while(*argv[1])
         {
             repeat = get_index(*argv[1]);
-            while(repeat--)
+            while(repeat--)         //prints letter as many times as index exists
                 write(1, argv[1], 1);
             argv[1]++;
         }
