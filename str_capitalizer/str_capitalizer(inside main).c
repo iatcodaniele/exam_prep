@@ -13,11 +13,11 @@ int main(int argc, char **argv)
             {
                 if(argv[i][j] >= 'A' && argv[i][j] <= 'Z')
                 {
-                    argv[i][j] += 32;
+                    argv[i][j] += 32; //all letters become lowercase
                 }
                 if((argv[i][j] >= 'a' && argv[i][j] <= 'z') && (argv[i][j] == argv[i][0] || argv[i][j-1] == ' ' || argv[i][j] == '\t'))
                 {
-                    argv[i][j] -=32;
+                    argv[i][j] -=32; //if the previous index is a space = first letter of word => becomes uppercase
                 }
                 write(1, &argv[i][j], 1);
                 j++;
