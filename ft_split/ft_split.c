@@ -15,34 +15,34 @@ int count_words(char *str)
 
 	while(*str)
 	{
-		while(*str && ft_space(*str) == 1)
+		while(*str && ft_space(*str) == 1) //skips if there are spaces
 			*str++;
-		if(*str && ft_space(*str) == 0)
-			counter++;
-		str++;
+		if(*str && ft_space(*str) == 0) //finds word
+			counter++;	//increases word counter
+		str++; //increments index of string to keep looking for either spaces or printables
 	}
 	return counter;
 }
 
-char *word_malloc(char *str)
+char *word_malloc(char *str) //allocating memory for individual words
 {
 	int i = 0;
 	char *word;
 
-	while(str[i] && ft_space(str[i]) == 1)
-		i++;
+	while(str[i] && ft_space(str[i]) == 1) //if there are white spaces at the beggining of string
+		i++; //skip them
 	word = (char*)malloc(sizeof(char) * (i + 1));
 	if(!word)
 	{
 		return NULL;
 	}
 	i = 0;
-	while(str[i] && ft_space(str[i]) == 0)
+	while(str[i] && ft_space(str[i]) == 0) //if there are no spaces
 	{
-		word[i] = str[i];
+		word[i] = str[i]; //store word until you find a space
 		i++;
 	}
-	word[i] = '\0';
+	word[i] = '\0'; //null terminate word array
 	return (word);
 }
 
@@ -51,25 +51,25 @@ char **ft_split(char *str)
 	int i = 0;
 	char **array;
 
-	array = (char**)malloc(sizeof(char*) * (count_words(str) + 1));
-	if(!array)
+	array = (char**)malloc(sizeof(char*) * (count_words(str) + 1)); //double pointer points at array of arrays with size
+	if(!array)									//number of words + null char
 	{
 		return (NULL);
 	}
 
 	while(*str)
 	{
-		while(*str && ft_space(*str) == 1)
-			str++;
-		if(*str && ft_space(*str) == 0)
+		while(*str && ft_space(*str) == 1) //skip spaces when it finds them
+			str++; 
+		if(*str && ft_space(*str) == 0) //if only printables, enter condition
 		{
-			array[i] = word_malloc(str);
+			array[i] = word_malloc(str); //store word allocation inside array allocation
 			i++;
-			while(*str && ft_space(*str) == 0)
-					str++;
+			while(*str && ft_space(*str) == 0) //move forwards inside string while there are no spaces(word delimiters)
+					str++; //continues while inside word; goes back up when it find a space
 		}
 	}
-	array[i] = '\0';
+	array[i] = '\0'; //null terminates the array
 	return (array);
 }
 
