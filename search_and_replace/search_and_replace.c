@@ -38,9 +38,9 @@ int main(int argc, char **argv)
     {
         while(*argv[1])
         {
-            if(argv[2][0] == *argv[1])
-            {
-                *argv[1] = argv[3][0];
+            if(argv[2][0] == *argv[1]) //if one of the characters in the first argument 
+            {                            //is the same as the second argument
+                *argv[1] = argv[3][0];    //gets replaced by the letter in the third argument
             }
             ft_putchar(*argv[1]);
             argv[1]++;
