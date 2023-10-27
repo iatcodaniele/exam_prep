@@ -15,7 +15,7 @@ char *ft_strrev(char *str)
     int end = ft_strlen(str) - 1; //-1 to exclude the null byte
     char temp;
 
-    while(str[start] < str[end]) //swap function to invert the position
+    while(start < end) //swap function to invert the position
     {                            //of the first elements to that of the last
            temp = str[start];
            str[start] = str[end];
