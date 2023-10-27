@@ -21,8 +21,8 @@ void rev_print(char *str)
 
     while(i >= 0)
     {
-        ft_putchar(str[i]);
-        i--;
+        ft_putchar(str[i]); //displays the string in reverse
+        i--;                //by setting i as the total length of i and iterating backwards
     }
 }
 
