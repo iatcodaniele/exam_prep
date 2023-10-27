@@ -18,18 +18,18 @@ int main(int argc, char **argv)
 	
 	if(argc == 3)
 	{
-		while(argv[2][j])
+		while(argv[2][j]) //checking the 2nd string for characters to use to write the 1st
 		{
-			if(argv[2][j] == argv[1][i])
+			if(argv[2][j] == argv[1][i]) //if any are found, enter condition
 			{
 				i++;
-				if(!argv[1][i])
+				if(!argv[1][i]) //if the 1st string ends
 				{
-					ft_putstr(argv[1]);
-					break;
+					ft_putstr(argv[1]);  //display the string of characters in common 
+ 					break;
 				}
 			}
-			j++;
+			j++; //if the char is no match, move ahead to next character
 		}
 	}
 	write(1, "\n", 1);
