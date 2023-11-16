@@ -1,2 +1,7 @@
-exam prep exercises 
-also I still need to figure out how to use git 
+## Piscine Final Exam Exercises
+
+Functions/programs that I practiced in order to prepare for the 42Piscine Final Exam
+
+
+**If you find any errors, please contact me.**
+
