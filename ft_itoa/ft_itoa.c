@@ -23,7 +23,7 @@ char *ft_itoa(int nbr)
     long nbl = nbr; //type long to accomodate INT_MIN
     char *array;
 
-    array = (char *)malloc(i + 1); //allocating to char type with size: number length + 1 for the null
+    array = (char *)malloc(sizeof(char) * (i + 1)); //allocating to char type with size: number length + 1 for the null
     if(!array)
         return NULL;
     
