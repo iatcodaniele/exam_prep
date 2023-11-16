@@ -1,3 +1,7 @@
+//actual atoi function that converts the first portion of the string to integer
+//for piscine exam function check ft_stoi(exam_specific)
+//it handles all spaces, not only the ones at the beginning of string like original atoi
+
 int is_space(char c)
 {
     if(c == ' ' || c == '\n' || c == '\t' || c == '\r' || c == '\v' || c == '\f' || c == '\b')
@@ -39,10 +43,26 @@ int ft_atoi(char *str)
 }
 
 #include <stdio.h>
-#include <stdlib.h>
-
+#include <stdlib.h> //check original atoi function against your own
 int main()
-{
-    printf("%d\n", atoi("   42   42")); //doesn't compile
-    printf("%d", ft_atoi("   42"));
+{	
+	printf("%d\n", ft_atoi("0")); //0
+	
+	printf("%d\n", ft_atoi("  42")); //42
+
+	printf("%d\n", ft_atoi("-42")); //-42
+	
+	printf("%d\n", ft_atoi("   falafel 42")); //0
+	 
+	printf("%d\n", ft_atoi("2147 483647")); //2147
+	
+	printf("%d\n", ft_atoi("-2147483648")); //-2147483648
+	
+	printf("%d\n", ft_atoi("7a6")); //7
+	
+	printf("%d\n", ft_atoi("++++42")); //0
+	
+	printf("%d\n", ft_atoi("-+-+-42")); //0
+	
+	printf("%d\n", ft_atoi("\t\n 4200a")); //0
 }
