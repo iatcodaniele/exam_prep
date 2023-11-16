@@ -1,35 +1,36 @@
 #include <unistd.h>
 
-void rstr_capitalizer(char *str)
+void ft_putchar(char c)
 {
-    int i = 0;
-
-    while(str[i])
-    {
-        if(str[i] >= 'A' && str[i] <= 'Z')
-        {
-            str[i] += 32; //makes all letters lowercase
-        }
-        if((str[i] >= 'a' && str[i] <= 'z') && (str[i + 1] == '\t' || str[i + 1] == ' ' || str[i + 1] == '\0'))
-        {
-            str[i] -= 32; //the last letters of words become uppercase
-        }
-        write(1, &str[i++], 1);
-    }
+	write(1, &c, 1);
 }
+
 int main(int argc, char **argv)
 {
-    int i = 1;
+	int i = 1;
+	int j = 0;
 
-    if(argc > 1)
-    {
-        while(i < argc)
-        {
-            rstr_capitalizer(argv[i]);
-            i++;
-        }    
-    }
-    write(1, "\n", 1);
-    return 0;
-    
+	if(argc > 1)
+	{
+		while(i < argc)
+		{
+			while(argv[i][j])
+			{
+				if(argv[i][j] >= 'A' && argv[i][j] <= 'Z')
+				{
+					argv[i][j] +=32;
+				}
+				if((argv[i][j+1] == '\0' || argv[i][j+1] == ' ') && (argv[i][j] >= 'a' && argv[i][j] <= 'z'))
+				{
+					argv[i][j] -=32;
+					ft_putchar(argv[i][j]);
+				}
+				else
+					ft_putchar(argv[i][j]);
+				j++;
+			}
+		i++;
+		}
+	}
+	ft_putchar('\n');
 }
