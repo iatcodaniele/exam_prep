@@ -4,7 +4,7 @@ void    ft_putchar(char c)
     write(1, &c, 1);
 }
 
-/*void    search_and_replace(char *str, char a, char b)
+void    search_and_replace(char *str, char a, char b)
 {
     int i = 0;
     while(str[i]!= '\0')
@@ -30,21 +30,4 @@ int main(int argc, char **argv)
     
     }
     ft_putchar('\n');
-} */
-
-int main(int argc, char **argv)
-{
-    if(argc == 4)
-    {
-        while(*argv[1])
-        {
-            if(argv[2][0] == *argv[1]) //if one of the characters in the first argument 
-            {                            //is the same as the second argument
-                *argv[1] = argv[3][0];    //gets replaced by the letter in the third argument
-            }
-            ft_putchar(*argv[1]);
-            argv[1]++;
-        }
-    }
-    ft_putchar('\n');
-}
+} 
