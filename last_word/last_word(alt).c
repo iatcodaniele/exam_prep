@@ -5,7 +5,7 @@ void ft_putchar(char c)
     write(1, &c, 1);
 }
 
-/*void last_word(char *str)
+void last_word(char *str)
 {
     int i = 0;
     int j;
@@ -33,7 +33,7 @@ int main(int argc, char **argv)
         ft_putchar('\n');
     }
     ft_putchar('\n');
-}*/
+}
 
 
 
